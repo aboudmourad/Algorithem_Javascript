@@ -1,0 +1,42 @@
+Bubble Sort:
+function bubbleSort(arr) {
+
+    var temp = 0;
+
+    for (var i = 0; i < arr.length-1; i++) {
+
+       for (var j = 0; j < arr.length-1; j++) {
+
+            if (arr[j] > arr[j+1]) {
+
+                temp = arr[j];
+
+                arr[j] = arr[j+1];
+
+                arr[j+1] = temp;
+
+            }
+
+        }
+
+    }
+
+
+    return arr;
+
+}
+
+console.log(bub([70, 8, 23, 1]))
+
+First of all, we make a function with one argument then in side the function we make two for loop that looping in order to compare two
+and switch it then moved to the next two element and check to whether the first element is bigger then the other.
+we defined a varible temp equal to zero to hold the number that bigger then the another and switch it. then will move to the second two 
+numbers and compare it. in the end will return the arr.
+
+arr      |__70,8____|_____|_ 
+i        |  0       |  1    |2        |1     |0
+j        |   0      |  1    |2        |2     |1
+arr[j]   |  70      |  70   |70       |23    |1
+arr[j+1] |   8      |   23  |1        |1     |1
+temp     |   8      |   23  |1        |1     |23
+new arr  | 8,70     |8,23,70|8,23,1,70|8,1,23|1,8,23,70
